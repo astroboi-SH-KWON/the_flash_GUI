@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="289cbf09-959d-4d4d-89ec-8f50bbccae33" name="Default Changelist" comment="" />
+    <list default="true" id="289cbf09-959d-4d4d-89ec-8f50bbccae33" name="Default Changelist" comment="ing">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/the_flash_GUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/the_flash_GUI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,12 +43,13 @@
   <component name="ProjectId" id="1dqNTcRFE0ipBVPSK2Mt2PHkHCs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -33,7 +57,7 @@
       <recent name="D:\Github\the_flash_GUI" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.the_FLASH">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="the_flash_GUI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,24 +80,80 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="the_flash_GUI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="flash_and_Sorting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="the_flash_GUI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flash_and_Sorting.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="the_FLASH" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="the_flash_GUI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/the_FLASH.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.the_FLASH" />
+        <item itemvalue="Python.Test" />
+        <item itemvalue="Python.flash_and_Sorting" />
         <item itemvalue="Python.Main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -84,20 +164,118 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593148671632</updated>
-      <workItem from="1593148675499" duration="281000" />
+      <workItem from="1593148675499" duration="6524000" />
+      <workItem from="1594341750307" duration="772000" />
     </task>
+    <task id="LOCAL-00001" summary="최초 등록">
+      <created>1606091473988</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606091473988</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ing">
+      <created>1606103361794</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606103361794</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="1991" y="187" key="SettingsEditor" timestamp="1593148796841">
-      <screen x="1982" y="-414" width="1018" height="1920" />
-    </state>
-    <state x="1991" y="187" key="SettingsEditor/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1593148796841" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/the_flash_GUI$Main.coverage" NAME="Main Coverage Results" MODIFIED="1593148957511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="최초 등록" />
+    <MESSAGE value="ing" />
+    <option name="LAST_COMMIT_MESSAGE" value="ing" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1037" height="828" key="GridCell.Tab.0.bottom" timestamp="1606105109529">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="1836" height="332" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.-155.1080.1890@0.0.1858.1080" timestamp="1606098058549" />
+    <state width="1037" height="828" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606105109529" />
+    <state width="1037" height="828" key="GridCell.Tab.0.center" timestamp="1606105109529">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="1836" height="332" key="GridCell.Tab.0.center/0.0.1858.1080/1920.-155.1080.1890@0.0.1858.1080" timestamp="1606098058549" />
+    <state width="1037" height="828" key="GridCell.Tab.0.center/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606105109529" />
+    <state width="1037" height="828" key="GridCell.Tab.0.left" timestamp="1606105109529">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="1836" height="332" key="GridCell.Tab.0.left/0.0.1858.1080/1920.-155.1080.1890@0.0.1858.1080" timestamp="1606098058549" />
+    <state width="1037" height="828" key="GridCell.Tab.0.left/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606105109529" />
+    <state width="1037" height="828" key="GridCell.Tab.0.right" timestamp="1606105109529">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="1836" height="332" key="GridCell.Tab.0.right/0.0.1858.1080/1920.-155.1080.1890@0.0.1858.1080" timestamp="1606098058549" />
+    <state width="1037" height="828" key="GridCell.Tab.0.right/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606105109529" />
+    <state width="927" height="1020" key="GridCell.Tab.1.bottom" timestamp="1606096524512">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="927" height="1020" key="GridCell.Tab.1.bottom/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096524512" />
+    <state width="927" height="1020" key="GridCell.Tab.1.center" timestamp="1606096524512">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="927" height="1020" key="GridCell.Tab.1.center/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096524512" />
+    <state width="927" height="1020" key="GridCell.Tab.1.left" timestamp="1606096685481">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="927" height="1020" key="GridCell.Tab.1.left/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096685481" />
+    <state width="927" height="1020" key="GridCell.Tab.1.right" timestamp="1606096524512">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="927" height="1020" key="GridCell.Tab.1.right/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096524512" />
+    <state width="927" height="1020" key="GridCell.Tab.2.bottom" timestamp="1606096524504">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="927" height="1020" key="GridCell.Tab.2.bottom/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096524504" />
+    <state width="927" height="1020" key="GridCell.Tab.2.center" timestamp="1606096524504">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="927" height="1020" key="GridCell.Tab.2.center/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096524504" />
+    <state width="927" height="1020" key="GridCell.Tab.2.left" timestamp="1606096524504">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="927" height="1020" key="GridCell.Tab.2.left/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096524504" />
+    <state width="927" height="1020" key="GridCell.Tab.2.right" timestamp="1606096524504">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state width="927" height="1020" key="GridCell.Tab.2.right/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096524504" />
+    <state x="607" y="188" key="SettingsEditor" timestamp="1605871421438">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="607" y="188" key="SettingsEditor/0.0.1858.1080/1920.-155.1080.1890@0.0.1858.1080" timestamp="1605871421438" />
+    <state x="2051" y="522" key="Vcs.Push.Dialog.v2" timestamp="1606091480913">
+      <screen x="1920" y="-155" width="1080" height="1890" />
+    </state>
+    <state x="2051" y="522" key="Vcs.Push.Dialog.v2/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606091480913" />
+    <state x="923" y="16" width="941" height="1071" key="dock-window-1" timestamp="1606105026098">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="1993" y="189" width="959" height="1167" maximized="true" key="dock-window-1/0.0.1858.1080/1920.-155.1080.1890@0.0.1858.1080" timestamp="1606097823485" />
+    <state x="923" y="16" width="941" height="1071" key="dock-window-1/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606105026098" />
+    <state x="33" y="60" width="943" height="1087" key="dock-window-2" timestamp="1606096831762">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="33" y="60" width="943" height="1087" key="dock-window-2/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606096831762" />
+    <state x="922" y="0" width="943" height="1087" key="dock-window-3" timestamp="1606105351936">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="922" y="0" width="943" height="1087" key="dock-window-3/0.0.1858.1080/1920.-155.1080.1890@1920.-155.1080.1890" timestamp="1606105351936" />
   </component>
 </project>
