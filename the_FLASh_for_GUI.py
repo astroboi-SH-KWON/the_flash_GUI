@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 from tkinter import filedialog
-import multiprocessing as mp
 import os
 import shutil
 
@@ -12,11 +11,9 @@ FILE_LIST = None
 FILE_INPUT_LABEL = None
 log_txt = None
 
-FLASH_RESULT = 'FLASH_RESULT'
-CO_PRODUCT_FILES = 'co_product_files'
+FLASH_RESULT = '../FLASh_RESULT'
+CO_PRODUCT_FILES = '../co_product_files'
 
-TOTAL_CPU = mp.cpu_count()
-MULTI_CNT = int(TOTAL_CPU * 0.5)
 ############### end setting env #################
 
 
@@ -37,41 +34,43 @@ def valid_file_list(fl_list):
     for idx in range(tot_len):
         fl1 = fl_list[idx][::-1][0]
         fl2 = fl_list[idx][::-1][1]
-        if fl1.replace(' ', '') == '':
-            messagebox.showerror('error', 'check row ' + str(tot_len - idx) + ' and the first file path')
-            return False
-        elif fl2.replace(' ', '') == '':
-            messagebox.showerror('error', 'check row ' + str(tot_len - idx) + ' and the second file path')
+        if fl1.replace(' ', '') == '' or fl2.replace(' ', '') == '':
+            messagebox.showerror('error', 'check file path')
             return False
     return True
 
 
 def make_dir():
+    global log_txt
     try:
         os.makedirs(FLASH_RESULT, exist_ok=True)
         os.makedirs(CO_PRODUCT_FILES, exist_ok=True)
     except Exception as err:
-        print('[-ERROR-] during making useless file folders\n' + str(err))
+        log_txt.insert(CURRENT, '[-ERROR-] during making useless file folders\n' + str(err) + '\n')
 
 
 def excute_flash(fq1, fq2, output_path):
+    global log_txt
     try:
+        log_txt.insert(CURRENT, 'FLAShing ==========\n\t' + output_path + '\n')
         os.system('flash {} {} -M 400 -m 10 -O -o {}'.format(fq1, fq2, output_path))
         return
 
     except Exception as err:
-        print('[-ERROR-] during flashing with \n\t' + output_path + '\n' + str(err))
+        log_txt.insert(CURRENT, '[-ERROR-] during FLAShing \n' + str(err) + '\n')
 
 
 def rename_FASTQ(o_path):
+    global log_txt
     try:
         os.remove(o_path + '.fastq')
     except Exception as err:
-        print('[-ERROR-] os.remove(' + o_path + '.fastq)\n' + str(err))
+        log_txt.insert(CURRENT, '[-ERROR-] os.remove(' + o_path + '.fastq)\n' + str(err) + '\n')
     os.rename(o_path + '.extendedFrags.fastq', o_path + '.fastq')
 
 
 def move_useless(output):
+    global log_txt
     try:
         file1 = '{}.hist'.format(output)
         file2 = '{}.hist.innie'.format(output)
@@ -87,24 +86,28 @@ def move_useless(output):
             shutil.move(i, CO_PRODUCT_FILES)
         return
     except Exception as err:
-        print('[-ERROR-] during moving files to /co_product_files \n\t' + output + '\n' + str(err))
+        log_txt.insert(CURRENT, '[-ERROR-] during moving files to /co_product_files \n' + str(err) + '\n')
 
 
 def move_FASTQ(output):
+    global log_txt
     try:
         shutil.move('{}.fastq'.format(output), FLASH_RESULT)
         return
     except Exception as err:
-        print('[-ERROR-] during moving FASTQ \n\t' + output + '\n' + str(err))
+        log_txt.insert(CURRENT, '[-ERROR-] during moving FASTQ\n' + str(err) + '\n')
 
 
 def run_flash(fq1, fq2, output_path):
-    # log_text.insert(CURRENT, 'make dir\n\t' + output_path + '\n')
+    global log_txt
+    log_txt.insert(CURRENT, 'make dir\n')
     make_dir()
     excute_flash(fq1, fq2, output_path)
+    log_txt.insert(CURRENT, 'move files\n')
     rename_FASTQ(output_path)
     move_useless(output_path)
     move_FASTQ(output_path)
+    log_txt.insert(CURRENT, '\nthe FLASh is DONE\n')
     return
 
 
@@ -137,9 +140,8 @@ def click_flash():
                 output_path, f_ex = os.path.splitext(output_path)
             else:
                 output_path, f_ex = os.path.splitext(tmp[::-1][0])
-            log_txt.insert(CURRENT, 'start FLASH\n\t' + output_path + '\n')
-            proc = mp.Process(target=run_flash, args=(tmp[::-1][0], tmp[::-1][1], output_path.split('/')[-1],))
-            proc.start()
+            log_txt.insert(CURRENT, 'start FLASh\n\t' + output_path + '\n')
+            run_flash(tmp[::-1][0], tmp[::-1][1], output_path.split('/')[-1])
 
 
 def add_upload_file():
@@ -198,27 +200,21 @@ def setupGUI():
     global log_txt
 
     WIN = Tk()
-    WIN.title('the FLASH for GUI')
+    WIN.title('FLASh for GUI')
 
     notebk = ttk.Notebook(WIN)
     notebk.pack()
 
     frame1 = Frame(WIN)
-    notebk.add(frame1, text='the FLASH')
+    notebk.add(frame1, text='FLASh')
 
     spec_label = Label(frame1)
     spec_label.grid(row=0, columnspan=3, padx=3, pady=3)
 
     # st notice
-    default_cpu, cpu_list = get_opt_list(MULTI_CNT, TOTAL_CPU)
-    recmd_cpu = ' Recommend ' + str(default_cpu) + ' CPU, Max ' + str(cpu_list[-1]) + ' CPU '
+    recmd_cpu = ' [ + strand ] | [ - strand ] '
     cpu_label = Label(spec_label, text=recmd_cpu, font='Courier 20 bold', relief=RAISED)
     cpu_label.grid(row=0, column=0, padx=5, pady=3)
-
-    Button(spec_label, text='+', font='Courier 15 bold', command=add_upload_file, width=5).grid(row=0, column=2, padx=3,
-                                                                                                pady=3)
-    Button(spec_label, text='-', font='Courier 15 bold', command=del_upload_file, width=5).grid(row=0, column=3, padx=3,
-                                                                                                pady=3)
     # en notice
 
     # st file_input_label
@@ -249,7 +245,7 @@ def setupGUI():
     btn_label.grid(row=2, column=2, padx=3, pady=3)
     reset_btn = Button(btn_label, text='reset', font='Courier 10 bold', fg='red', command=reset, width=10)
     reset_btn.grid(row=0, column=2, padx=3, pady=5)
-    flash_btn = Button(btn_label, text='run\nthe FLASH', font='Courier 15 bold', fg='dark blue', command=click_flash,
+    flash_btn = Button(btn_label, text='run\nFLASh', font='Courier 15 bold', fg='dark blue', command=click_flash,
                        width=10, height=8)
     flash_btn.grid(row=1, column=2, padx=3, pady=5)
 
